@@ -1,5 +1,6 @@
 package presantation;
 
+import bussinessLogic.AvgDatas;
 import services.ServiceCall;
 import services.Weather2;
 import services.Weather3;
@@ -21,8 +22,8 @@ public class WeatherLadyDemo {
                 case 1:
                     Scanner sc=new Scanner(System.in);
                     String location=sc.nextLine();
-                    ServiceCall openWeather = new Weather2(location);
-                    System.out.println(openWeather.getTemp());
+                    AvgDatas avgDatas=new AvgDatas();
+                    avgDatas.downloadData(location);
                     break;
                 case 2:
 

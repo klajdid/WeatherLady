@@ -18,6 +18,7 @@ public class AvgDatas {
     public void downloadData(String location) throws Exception {
         list.add(new Weather2(location));
         list.add(new Weather3(location));
+        System.out.println(list.stream().mapToDouble(Iservice::getTemp).average().getAsDouble());
     }
 
 
