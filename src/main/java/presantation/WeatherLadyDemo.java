@@ -1,9 +1,12 @@
 package presantation;
 
+import services.ServiceCall;
+import services.Weather2;
+
 import java.util.Scanner;
 
 public class WeatherLadyDemo {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         boolean check=true;
         Scanner scanner=new Scanner(System.in);
@@ -17,9 +20,8 @@ public class WeatherLadyDemo {
                 case 1:
                     Scanner sc=new Scanner(System.in);
                     String location=sc.nextLine();
-
-
-                    sc.close();
+                    ServiceCall openWeather = new Weather2(location);
+                    System.out.println(openWeather.getTemp());
                     break;
                 case 2:
 

@@ -1,6 +1,11 @@
 package services;
 
-public class Weather1 implements Iservice{
+public class Weather1 extends ServiceCall{
+
+    public Weather1() {
+        super("");
+    }
+
     @Override
     public double getTemp() {
         return 0;
