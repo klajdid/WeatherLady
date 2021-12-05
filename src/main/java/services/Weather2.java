@@ -19,7 +19,7 @@ public class Weather2 extends ServiceCall {
 
     @Override
     public double getTemp() {
-        return root.main.temp;
+        return root.main.temp- 273.15;
     }
 
     @Override
