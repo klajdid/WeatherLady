@@ -16,6 +16,23 @@ public class Weather3 extends ServiceCall{
         root = gson.fromJson(response, Root1.class);
     }
 
+    public String getLocationName(){
+        return root.location.name;
+    }
+
+
+    public String getRegionName(){
+        return root.location.region;
+    }
+
+    public String getCountryName(){
+        return root.location.country;
+    }
+
+    public String getObservationTime(){
+        return root.current.observationTime;
+    }
+
     @Override
     public double getTemp() {
         return root.current.temperature;
@@ -25,4 +42,6 @@ public class Weather3 extends ServiceCall{
     public double getPressure() {
         return root.current.pressure;
     }
+
+
 }

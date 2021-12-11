@@ -3,12 +3,12 @@ package services.models;
 import java.util.List;
 
 public class Current{
-    public String observation_time;
+    public String observationTime;
     public int temperature;
-    public int weather_code;
+    public int weatherCode;
     public List<String> weather_icons;
     public List<String> weather_descriptions;
-    public int wind_speed;
+    public int windSpeed;
     public int wind_degree;
     public String wind_dir;
     public int pressure;

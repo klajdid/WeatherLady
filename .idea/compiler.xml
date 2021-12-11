@@ -9,6 +9,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="WeatherLady" />
+        <module name="Repos" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="16" />
