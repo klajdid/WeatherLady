@@ -11,6 +11,7 @@ public abstract class ServiceCall implements Iservice {
     private String url;
 
     public ServiceCall(String url) {
+
         this.url = url;
     }
 
