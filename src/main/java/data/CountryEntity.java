@@ -1,8 +1,6 @@
 package data;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
 
@@ -14,7 +12,7 @@ import javax.persistence.*;
 public class CountryEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id")
+    @Column(name = "id_country")
     private Integer id;
 
     @Column(name = "region")
@@ -23,9 +21,7 @@ public class CountryEntity {
     @Column (name = "country_name")
     private String countryName;
 
-    @ManyToOne
-    @JoinColumn(name = "id")
-    private  LocationEntity location;
-
+    @OneToOne(mappedBy = "country")
+    private LocationEntity user;
 
 }

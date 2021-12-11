@@ -17,6 +17,16 @@ public class Weather2 extends ServiceCall {
         root = gson.fromJson(response, Root.class);
     }
 
+    public double getLatitude(){
+        return root.coord.lat;
+    }
+
+    public double getLogitude(){
+        return root.coord.lon;
+    }
+
+    public double getWindSpeed(){return root.wind.speed;}
+
     @Override
     public double getTemp() {
         return root.main.temp- 273.15;
@@ -26,4 +36,6 @@ public class Weather2 extends ServiceCall {
     public double getPressure() {
         return root.main.pressure;
     }
+
+
 }
